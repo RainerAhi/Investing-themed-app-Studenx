@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:studenx_oige/AktsiadFolder/Tase2Teadmised.dart';
-import 'package:studenx_oige/AktsiadFolder/Tase1Teadmised.dart';
+import 'package:studenx_oigev2/AktsiadFolder/Tase2Teadmised.dart';
+import 'package:studenx_oigev2/AktsiadFolder/Tase1Teadmised.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
 import 'package:page_transition/page_transition.dart';

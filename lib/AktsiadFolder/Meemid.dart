@@ -3,8 +3,8 @@ import 'package:flutter_carousel_slider/carousel_slider.dart';
 import 'package:flutter_carousel_slider/carousel_slider_indicators.dart';
 import 'package:flutter_carousel_slider/carousel_slider_transforms.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:studenx_oige/AktsiadFolder/Aktsiad.dart';
-import 'package:studenx_oige/pages/Kodu.dart';
+import 'package:studenx_oigev2/AktsiadFolder/Aktsiad.dart';
+import 'package:studenx_oigev2/pages/Kodu.dart';
 
 
 class Meemid extends StatefulWidget {

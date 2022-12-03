@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:studenx_oige/AktsiadFolder/Cnbc1.dart';
-import 'package:studenx_oige/AktsiadFolder/WallStreetJournal.dart';
-import 'package:studenx_oige/AktsiadFolder/YahooFn.dart';
-import 'package:studenx_oige/News/MyNews.dart';
+import 'package:studenx_oigev2/AktsiadFolder/Cnbc1.dart';
+import 'package:studenx_oigev2/AktsiadFolder/WallStreetJournal.dart';
+import 'package:studenx_oigev2/AktsiadFolder/YahooFn.dart';
+import 'package:studenx_oigev2/News/MyNews.dart';
 
 
 class UudisedCover extends StatefulWidget {

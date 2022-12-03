@@ -7,14 +7,13 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:slide_to_act/slide_to_act.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:studenx_oige/AktsiadFolder/Aktsiad.dart';
-import 'package:studenx_oige/Music/MyMusicPlayer.dart';
-import 'package:studenx_oige/Music/MyMusicPlayerReading.dart';
-import 'package:studenx_oige/ToDo/TodoMain.dart';
+import 'package:studenx_oigev2/AktsiadFolder/Aktsiad.dart';
+import 'package:studenx_oigev2/Music/MyMusicPlayer.dart';
+import 'package:studenx_oigev2/ToDo/TodoMain.dart';
 import 'package:lottie/lottie.dart';
 import 'dart:math' as math;
 
-import 'package:studenx_oige/pages/socials.dart';
+import 'package:studenx_oigev2/pages/socials.dart';
 
 class Tase1Teadmised extends StatefulWidget {
   const Tase1Teadmised({Key? key}) : super(key: key);
