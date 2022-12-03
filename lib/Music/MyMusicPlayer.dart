@@ -1,0 +1,144 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
+import 'package:studenx_oigev2/AktsiadFolder/Aktsiad.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'package:page_transition/page_transition.dart';
+import 'dart:math' as math;
+
+class MyMusic extends StatefulWidget {
+  const MyMusic({Key? key}) : super(key: key);
+
+  @override
+  State<MyMusic> createState() => _MyMusicState();
+}
+
+class _MyMusicState extends State<MyMusic> {
+
+  late YoutubePlayerController ytController;
+
+  @override
+  void initState() {
+    ytController = YoutubePlayerController(
+      initialVideoId: "jfKfPfyJRdk",
+      flags: YoutubePlayerFlags(
+        autoPlay: false,
+        isLive: true,
+        hideThumbnail: true,
+      ),
+    );
+    super.initState();
+  }
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+          child: ClipRRect(
+            borderRadius: BorderRadius.only(
+              topRight: Radius.circular(100), topLeft: Radius.circular(100),bottomRight: Radius.circular(100), bottomLeft: Radius.circular(100),
+            ),
+            child: ClipPath(
+              clipper: WaveClipperHx(),
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: RadialGradient(
+                    colors: [
+                      Color(0xffFFC371),
+                      Color(0xffFFC371),
+                      Color(0xffFF5F6D),
+                      Color(0xffFF5F6D),
+                    ],
+                  ),
+                ),
+                height: 170,
+                width: 246,
+                child: YoutubePlayer(
+                  width: 200,
+                  controller: ytController,
+                  showVideoProgressIndicator: false,
+                ),
+              ),
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 0, top: 0),
+          child: GestureDetector(
+            onTap: () {
+              if(ytController.value.isPlaying) {
+                ytController.pause();
+              } else {
+                ytController.play();
+              }
+            },
+            child: ClipPath(
+              clipper: WaveClipperHx(),
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: RadialGradient(
+                    colors: [
+                      Color(0xffFFC371),
+                      Color(0xffFFC371),
+                      Color(0xffFF5F6D),
+                      Color(0xffFF5F6D),
+                    ],
+                  ),
+                ),
+                height: 170,
+                width: 246,
+                child: Lottie.network("https://assets10.lottiefiles.com/private_files/lf30_fjln45y5.json"),
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+class GradientText extends StatelessWidget {
+  const GradientText(
+      this.text, {
+        required this.gradient,
+        this.style,
+      });
+
+  final String text;
+  final TextStyle? style;
+  final Gradient gradient;
+
+  @override
+  Widget build(BuildContext context) {
+    return ShaderMask(
+      blendMode: BlendMode.srcIn,
+      shaderCallback: (bounds) => gradient.createShader(
+        Rect.fromLTWH(0, 0, bounds.width, bounds.height),
+      ),
+      child: Text(text, style: style),
+    );
+  }
+}
+
+class WaveClipperHx extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    Path path0 = Path();
+    path0.moveTo(size.width*0.6900000,0);
+    path0.lineTo(size.width*0.3100000,0);
+    path0.lineTo(size.width*0.1180000,size.height*0.5000000);
+    path0.lineTo(size.width*0.3100000,size.height);
+    path0.lineTo(size.width*0.6900000,size.height);
+    path0.lineTo(size.width*0.8780000,size.height*0.5000000);
+    path0.lineTo(size.width*0.6900000,0);
+    path0.close();
+    return path0;
+  }
+
+  @override
+  bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
+    return false;
+  }
+}
