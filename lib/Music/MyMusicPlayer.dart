@@ -36,31 +36,26 @@ class _MyMusicState extends State<MyMusic> {
     return Stack(
       children: [
         Padding(
-          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-          child: ClipRRect(
-            borderRadius: BorderRadius.only(
-              topRight: Radius.circular(100), topLeft: Radius.circular(100),bottomRight: Radius.circular(100), bottomLeft: Radius.circular(100),
-            ),
-            child: ClipPath(
-              clipper: WaveClipperHx(),
-              child: Container(
-                decoration: BoxDecoration(
-                  gradient: RadialGradient(
-                    colors: [
-                      Color(0xffFFC371),
-                      Color(0xffFFC371),
-                      Color(0xffFF5F6D),
-                      Color(0xffFF5F6D),
-                    ],
-                  ),
+          padding: const EdgeInsets.only(left: 73.5),
+          child: ClipPath(
+            clipper: WaveClipperHx(),
+            child: Container(
+              decoration: BoxDecoration(
+                gradient: RadialGradient(
+                  colors: [
+                    Color(0xffFFC371),
+                    Color(0xffFFC371),
+                    Color(0xffFF5F6D),
+                    Color(0xffFF5F6D),
+                  ],
                 ),
-                height: 170,
-                width: 246,
-                child: YoutubePlayer(
-                  width: 200,
-                  controller: ytController,
-                  showVideoProgressIndicator: false,
-                ),
+              ),
+              height: 170,
+              width: 94,
+              child: YoutubePlayer(
+                width: 200,
+                controller: ytController,
+                showVideoProgressIndicator: false,
               ),
             ),
           ),
