@@ -50,22 +50,6 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
 
 
-  static const colorizeColors = [
-    Colors.white,
-    Color(0xff89CFFF),
-    Color(0xffdf98fa),
-    Color(0xff9055ff)
-  ];
-
-  static const colorizeTextStyle = TextStyle(
-    fontSize: 50.0,
-    fontFamily: 'Horizon',
-  );
-
-  Future<void> _handleRefresh() async {
-    return await Future.delayed(Duration(milliseconds: 500));
-  }
-
   late final AnimationController _controller;
 
   @override
@@ -120,7 +104,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 340, top: 3),
+                    padding: const EdgeInsets.only(left: 300, top: 3),
                     child: GestureDetector(
                       onTap: () => Navigator.of(context).push(
                         PageTransition(
@@ -162,7 +146,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           child: Text(
                             "to financial freedom",
                             style: GoogleFonts.bebasNeue(
-                              fontSize: 50,
+                              fontSize: 48,
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
                             ),
@@ -230,6 +214,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                     Padding(
                                       padding: const EdgeInsets.only(top: 30, bottom: 30),
                                       child: Lottie.network("https://assets9.lottiefiles.com/private_files/lf30_F3v2Nj.json",
+                                        controller: _controller,
                                       ),
                                     ),
                                     Padding(
@@ -290,6 +275,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                     Padding(
                                       padding: const EdgeInsets.only(top: 0, bottom: 53),
                                       child: Lottie.network("https://assets8.lottiefiles.com/packages/lf20_yc9ywdm7.json",
+                                        controller: _controller,
                                       ),
                                     ),
                                     Padding(
@@ -368,7 +354,9 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                       width: 246,
                                       child: Padding(
                                         padding: const EdgeInsets.only(left: 0, top: 0),
-                                        child: Lottie.network("https://assets5.lottiefiles.com/private_files/lf30_x8aowqs9.json"),
+                                        child: Lottie.network("https://assets5.lottiefiles.com/private_files/lf30_x8aowqs9.json",
+                                          controller: _controller,
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -550,23 +538,30 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 105, left: 82),
-                          child: Text(
-                            "from students",
-                            style: GoogleFonts.bebasNeue(
-                              fontSize: 42,
-                              color: Colors.white,
-                            ),
+                          padding: const EdgeInsets.only(top: 105),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "from students",
+                                style: GoogleFonts.bebasNeue(
+                                  fontSize: 39,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 150, left: 78),
-                          child: Text(
-                            "to teenagers",
-                            style: GoogleFonts.bebasNeue(
-                              fontSize: 50,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
+                          padding: const EdgeInsets.only(top: 150),
+                          child: Center(
+                            child: Text(
+                              "to teenagers",
+                              style: GoogleFonts.bebasNeue(
+                                fontSize: 50,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                         ),
@@ -617,7 +612,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                               "Our intention",
                               style: GoogleFonts.prompt(
                                 fontWeight: FontWeight.bold,
-                                fontSize: 30,
+                                fontSize: 28,
                                 color: Color(0xffFF5F6D),
                               ),
                             ),

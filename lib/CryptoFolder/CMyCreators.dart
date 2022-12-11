@@ -62,8 +62,8 @@ class _CMyCreatorsState extends State<CMyCreators> {
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(100),
                                     child: Container(
-                                      height: 85,
-                                      width: 85,
+                                      height: 77,
+                                      width: 77,
                                       decoration: BoxDecoration(
                                           gradient: LinearGradient(colors: [
                                             Color(0xff89CFFF),
@@ -89,8 +89,8 @@ class _CMyCreatorsState extends State<CMyCreators> {
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(100),
                                     child: Container(
-                                      height: 85,
-                                      width: 85,
+                                      height: 77,
+                                      width: 77,
                                       color: Color(0xff5ce1e6),
                                       child: CircleAvatar(
                                         backgroundImage: AssetImage("assets/images/maxmaher.jpg"),
@@ -111,8 +111,8 @@ class _CMyCreatorsState extends State<CMyCreators> {
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(100),
                                     child: Container(
-                                      height: 85,
-                                      width: 85,
+                                      height: 77,
+                                      width: 77,
                                       color: Color(0xff5ce1e6),
                                       child: CircleAvatar(
                                         backgroundImage: AssetImage("assets/images/brianjung.jpg"),
@@ -137,8 +137,8 @@ class _CMyCreatorsState extends State<CMyCreators> {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(100),
                               child: Container(
-                                height: 85,
-                                width: 85,
+                                height: 77,
+                                width: 77,
                                 color: Color(0xfffbd072),
                                 child: CircleAvatar(
                                   backgroundImage: AssetImage("assets/images/whiteboardcrypto.jpg"),
@@ -159,8 +159,8 @@ class _CMyCreatorsState extends State<CMyCreators> {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(100),
                               child: Container(
-                                height: 85,
-                                width: 85,
+                                height: 77,
+                                width: 77,
                                 color: Color(0xfffbd072),
                                 child: CircleAvatar(
                                   backgroundImage: AssetImage("assets/images/finematics.jpg"),
@@ -181,8 +181,8 @@ class _CMyCreatorsState extends State<CMyCreators> {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(100),
                               child: Container(
-                                height: 85,
-                                width: 85,
+                                height: 77,
+                                width: 77,
                                 color: Color(0xfffbd072),
                                 child: CircleAvatar(
                                   backgroundImage: AssetImage("assets/images/larkdavis.jpg"),
@@ -203,8 +203,8 @@ class _CMyCreatorsState extends State<CMyCreators> {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(100),
                               child: Container(
-                                height: 85,
-                                width: 85,
+                                height: 77,
+                                width: 77,
                                 color: Color(0xfffbd072),
                                 child: CircleAvatar(
                                   backgroundImage: AssetImage("assets/images/hashoshi.jpg"),
@@ -225,8 +225,8 @@ class _CMyCreatorsState extends State<CMyCreators> {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(100),
                               child: Container(
-                                height: 85,
-                                width: 85,
+                                height: 77,
+                                width: 77,
                                 color: Color(0xfffbd072),
                                 child: CircleAvatar(
                                   backgroundImage: AssetImage("assets/images/sheldonevans.jpg"),
@@ -247,8 +247,8 @@ class _CMyCreatorsState extends State<CMyCreators> {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(100),
                               child: Container(
-                                height: 85,
-                                width: 85,
+                                height: 77,
+                                width: 77,
                                 color: Color(0xfffbd072),
                                 child: CircleAvatar(
                                   backgroundImage: AssetImage("assets/images/benjamincowen.jpg"),

@@ -41,22 +41,6 @@ class Kodu extends StatefulWidget {
 class _KoduState extends State<Kodu> with SingleTickerProviderStateMixin {
 
 
-  static const colorizeColors = [
-    Colors.white,
-    Color(0xff89CFFF),
-    Color(0xffdf98fa),
-    Color(0xff9055ff)
-  ];
-
-  static const colorizeTextStyle = TextStyle(
-    fontSize: 50.0,
-    fontFamily: 'Horizon',
-  );
-
-  Future<void> _handleRefresh() async {
-    return await Future.delayed(Duration(milliseconds: 500));
-  }
-
   late final AnimationController _controller;
 
   @override
@@ -113,7 +97,7 @@ class _KoduState extends State<Kodu> with SingleTickerProviderStateMixin {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 340, top: 3),
+                    padding: const EdgeInsets.only(left: 300, top: 3),
                     child: GestureDetector(
                       onTap: () => Navigator.of(context).push(
                         PageTransition(
@@ -223,6 +207,7 @@ class _KoduState extends State<Kodu> with SingleTickerProviderStateMixin {
                                     Padding(
                                       padding: const EdgeInsets.only(top: 30, bottom: 30),
                                       child: Lottie.network("https://assets9.lottiefiles.com/private_files/lf30_F3v2Nj.json",
+                                        controller: _controller,
                                       ),
                                     ),
                                     Padding(
@@ -283,6 +268,7 @@ class _KoduState extends State<Kodu> with SingleTickerProviderStateMixin {
                                     Padding(
                                       padding: const EdgeInsets.only(top: 0, bottom: 53),
                                       child: Lottie.network("https://assets8.lottiefiles.com/packages/lf20_yc9ywdm7.json",
+                                        controller: _controller,
                                       ),
                                     ),
                                     Padding(
@@ -361,7 +347,9 @@ class _KoduState extends State<Kodu> with SingleTickerProviderStateMixin {
                                       width: 246,
                                       child: Padding(
                                         padding: const EdgeInsets.only(left: 0, top: 0),
-                                        child: Lottie.network("https://assets5.lottiefiles.com/private_files/lf30_x8aowqs9.json"),
+                                        child: Lottie.network("https://assets5.lottiefiles.com/private_files/lf30_x8aowqs9.json",
+                                          controller: _controller,
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -463,7 +451,8 @@ class _KoduState extends State<Kodu> with SingleTickerProviderStateMixin {
                                             ),
                                             height: 170,
                                             width: 246,
-                                            child: Lottie.network("https://assets2.lottiefiles.com/packages/lf20_h8lk5ow8.json"),
+                                            child: Lottie.network("https://assets2.lottiefiles.com/packages/lf20_h8lk5ow8.json",
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -542,77 +531,92 @@ class _KoduState extends State<Kodu> with SingleTickerProviderStateMixin {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 105, left: 120),
-                          child: Text(
-                            "Õpilastelt",
-                            style: GoogleFonts.bebasNeue(
-                              fontSize: 42,
-                              color: Colors.white,
-                            ),
+                          padding: const EdgeInsets.only(top: 100),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Õpilastelt",
+                                style: GoogleFonts.bebasNeue(
+                                  fontSize: 42,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 150, left: 40),
-                          child: Text(
-                            "lastele ja noortele",
-                            style: GoogleFonts.bebasNeue(
-                              fontSize: 44,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                            ),
+                          padding: const EdgeInsets.only(top: 150),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "lastele ja noortele",
+                                style: GoogleFonts.bebasNeue(
+                                  fontSize: 40,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(69, 205, 50, 0),
-                          child: MaterialButton(
-                            color: Colors.white,
-                            height: 80,
-                            minWidth: 200,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)),
-                            onPressed: () {
-                              showDialog(
-                                context: context,
-                                builder: (context) => AlertDialog(
-                                  title: Text("Meie eesmärk",
-                                    style: GoogleFonts.bebasNeue(
-                                      fontSize: 40,
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                  content: Text(
-                                    "Meie eesmärk on laiendada õpilaste investeerimisalaseid teadmisi ning tekitada neis huvi investeerimise vastu ja seeläbi saada rohkem noori investeerima.",
-                                    style: GoogleFonts.sansita(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                    ),
-                                  ),
-                                  backgroundColor: Color(0xffFF5F6D),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20),
-                                  ),
-                                  actions: [
-                                    TextButton(
-                                      onPressed: () => Navigator.pop(context),
-                                      child: Text(
-                                        "Ok",
-                                        style: GoogleFonts.prompt(
+                          padding: const EdgeInsets.fromLTRB(0, 205, 0, 0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              MaterialButton(
+                                color: Colors.white,
+                                height: 80,
+                                minWidth: 200,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20)),
+                                onPressed: () {
+                                  showDialog(
+                                    context: context,
+                                    builder: (context) => AlertDialog(
+                                      title: Text("Meie eesmärk",
+                                        style: GoogleFonts.bebasNeue(
+                                          fontSize: 37,
                                           color: Colors.white,
                                         ),
                                       ),
+                                      content: Text(
+                                        "Meie eesmärk on laiendada õpilaste investeerimisalaseid teadmisi ning tekitada neis huvi investeerimise vastu ja seeläbi saada rohkem noori investeerima.",
+                                        style: GoogleFonts.sansita(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                        ),
+                                      ),
+                                      backgroundColor: Color(0xffFF5F6D),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(20),
+                                      ),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () => Navigator.pop(context),
+                                          child: Text(
+                                            "Ok",
+                                            style: GoogleFonts.prompt(
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
-                                  ],
+                                  );
+                                },
+                                child: Text(
+                                  "Meie eesmärk",
+                                  style: GoogleFonts.prompt(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 28,
+                                    color: Color(0xffFF5F6D),
+                                  ),
                                 ),
-                              );
-                            },
-                            child: Text(
-                              "Meie eesmärk",
-                              style: GoogleFonts.prompt(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 30,
-                                color: Color(0xffFF5F6D),
                               ),
-                            ),
+                            ],
                           ),
                         ),
                         Padding(

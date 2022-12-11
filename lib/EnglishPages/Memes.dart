@@ -9,14 +9,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 
 
-class Meemid extends StatefulWidget {
-  const Meemid({Key? key}) : super(key: key);
+class Memes extends StatefulWidget {
+  const Memes({Key? key}) : super(key: key);
 
   @override
-  State<Meemid> createState() => _MeemidState();
+  State<Memes> createState() => _MemesState();
 }
 
-class _MeemidState extends State<Meemid> with SingleTickerProviderStateMixin {
+class _MemesState extends State<Memes> with SingleTickerProviderStateMixin {
 
   late final AnimationController _controller;
 
@@ -683,7 +683,7 @@ class _MeemidState extends State<Meemid> with SingleTickerProviderStateMixin {
         ),
         Padding(
           padding: const EdgeInsets.only(top: 110,left: 40),
-          child: Text("meemid",
+          child: Text("memes",
             style: GoogleFonts.bebasNeue(
               fontSize: 60,
               color: Colors.white,

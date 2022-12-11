@@ -50,8 +50,8 @@ class _MyMusicState extends State<MyMusic> {
                   ],
                 ),
               ),
-              height: 170,
-              width: 94,
+              height: 0,
+              width: 0,
               child: YoutubePlayer(
                 width: 200,
                 controller: ytController,

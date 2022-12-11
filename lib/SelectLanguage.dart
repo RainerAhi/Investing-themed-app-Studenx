@@ -50,16 +50,18 @@ class _SelectLanguageState extends State<SelectLanguage> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 32, top: 5),
-                    child: Text("       vali keel/\nchoose language",
-                      style: GoogleFonts.bebasNeue(
-                        fontSize: 50,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 3,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("       vali keel/\nchoose language",
+                        style: GoogleFonts.bebasNeue(
+                          fontSize: 50,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 3,
+                        ),
                       ),
-                    ),
+                    ],
                   ),
                 ],
               ),
@@ -67,54 +69,52 @@ class _SelectLanguageState extends State<SelectLanguage> {
                 height: 330,
               ),
               Stack(
+                alignment: Alignment.center,
                 children: [
                   Column(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 80, bottom: 0, top: 10),
-                        child: GestureDetector(
-                          onTap: () => Navigator.of(context).push(
-                            PageTransition(
-                              child: WelcomeScreen(),
-                              type: PageTransitionType.fade,
-                              alignment: Alignment.center,
+                      GestureDetector(
+                        onTap: () => Navigator.of(context).push(
+                          PageTransition(
+                            child: WelcomeScreen(),
+                            type: PageTransitionType.fade,
+                            alignment: Alignment.center,
+                          ),
+                        ),
+                        child: Container(
+                          width: 185,
+                          padding: EdgeInsets.all(8),
+                          margin: const EdgeInsets.symmetric(vertical: 8),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            border: Border.all(color: Colors.white12, width: 4),
+                            gradient: LinearGradient(colors:
+                            [
+                              Color(0xffFFC371),
+                              Color(0xffFF5F6D),
+                            ],
                             ),
                           ),
-                          child: Container(
-                            width: 185,
-                            padding: EdgeInsets.all(8),
-                            margin: const EdgeInsets.symmetric(vertical: 8),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(16),
-                              border: Border.all(color: Colors.white12, width: 4),
-                              gradient: LinearGradient(colors:
-                              [
-                                Color(0xffFFC371),
-                                Color(0xffFF5F6D),
-                              ],
+                          child: Row(
+                            children: [
+                              Text("eesti",
+                                style: GoogleFonts.bebasNeue(
+                                  fontSize: 40,
+                                  color: Colors.white,
+                                ),
                               ),
-                            ),
-                            child: Row(
-                              children: [
-                                Text("eesti",
-                                  style: GoogleFonts.bebasNeue(
-                                    fontSize: 40,
-                                    color: Colors.white,
-                                  ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 10),
+                                child: Image.asset("assets/images/eesti.png",
+                                  height: 50,
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 10),
-                                  child: Image.asset("assets/images/eesti.png",
-                                    height: 50,
-                                  ),
-                                ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 83),
+                        padding: const EdgeInsets.only(bottom: 100),
                         child: GestureDetector(
                           onTap: () => Navigator.of(context).push(
                             PageTransition(
