@@ -1,16 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:studenx_oigev2/AktsiadFolder/WallStreetJournal.dart';
 import 'package:studenx_oigev2/EnglishPages/CryptoCurrency/CoinTele.dart';
 import 'package:studenx_oigev2/EnglishPages/CryptoCurrency/Coindesk.dart';
 import 'package:studenx_oigev2/EnglishPages/CryptoCurrency/Investo.dart';
-import 'package:studenx_oigev2/News/MyNews.dart';
-
-import '../../CryptoFolder/CoinT.dart';
-import '../../CryptoFolder/Coind.dart';
-import '../../CryptoFolder/Investope.dart';
 
 
 class CNewsCover extends StatefulWidget {
@@ -22,30 +15,13 @@ class CNewsCover extends StatefulWidget {
 
 class _CNewsCoverState extends State<CNewsCover> with SingleTickerProviderStateMixin{
 
-  late final AnimationController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-
-    _controller = AnimationController(
-        vsync: this
-    );
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-
-    _controller.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         Padding(
-          padding: const EdgeInsets.only(top: 100),
+          padding: const EdgeInsets.only(top: 75),
           child: Container(
             decoration: BoxDecoration(
               border: Border.all(color: Colors.white12, width: 10),
@@ -245,10 +221,9 @@ class _CNewsCoverState extends State<CNewsCover> with SingleTickerProviderStateM
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 160),
-          child: Lottie.network("https://assets6.lottiefiles.com/packages/lf20_mp6wwkvx.json",
-            controller: _controller,
-            height: 200,
+          padding: const EdgeInsets.only(top: 0, bottom: 0, left: 185, right: 10),
+          child: Image.asset("assets/images/uudised.png",
+            height: 140,
           ),
         ),
       ],

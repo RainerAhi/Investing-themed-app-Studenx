@@ -6,14 +6,9 @@ import 'package:page_transition/page_transition.dart';
 import 'package:studenx_oigev2/screens/welcome_screen.dart';
 import 'package:studenx_oigev2/screens/welcome_screen_english.dart';
 
-class SelectLanguage extends StatefulWidget {
+class SelectLanguage extends StatelessWidget {
   const SelectLanguage({Key? key}) : super(key: key);
 
-  @override
-  State<SelectLanguage> createState() => _SelectLanguageState();
-}
-
-class _SelectLanguageState extends State<SelectLanguage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -65,7 +60,7 @@ class _SelectLanguageState extends State<SelectLanguage> {
                   ),
                 ],
               ),
-              Lottie.network("https://assets6.lottiefiles.com/private_files/lf30_of1c2696.json",
+              Image.asset("assets/images/globe1.png",
                 height: 330,
               ),
               Stack(

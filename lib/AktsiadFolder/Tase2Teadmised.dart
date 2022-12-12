@@ -1,15 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_carousel_slider/carousel_slider.dart';
-import 'package:flutter_carousel_slider/carousel_slider_indicators.dart';
-import 'package:flutter_carousel_slider/carousel_slider_transforms.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:slide_to_act/slide_to_act.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:studenx_oigev2/AktsiadFolder/Aktsiad.dart';
-import 'package:studenx_oigev2/ToDo/TodoMain.dart';
 
 class Tase2Teadmised extends StatefulWidget {
   const Tase2Teadmised({Key? key}) : super(key: key);

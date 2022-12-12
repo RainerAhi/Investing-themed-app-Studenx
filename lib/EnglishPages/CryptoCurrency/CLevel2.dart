@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:studenx_oigev2/EnglishPages/CryptoCurrency/CLevel2Learning.dart';
@@ -11,8 +10,7 @@ class CLevel2 extends StatefulWidget {
   State<CLevel2> createState() => _CLevel2();
 }
 
-class _CLevel2 extends State<CLevel2> {
-
+class _CLevel2 extends State<CLevel2> with SingleTickerProviderStateMixin {
 
 
   @override
@@ -81,10 +79,8 @@ class _CLevel2 extends State<CLevel2> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 160, top: 0),
-                      child: Lottie.network(
-                        "https://assets5.lottiefiles.com/packages/lf20_3vc9btr6.json",
-                        height: 150,
+                      padding: const EdgeInsets.only(top: 10, bottom: 50, left: 170, right: 10),
+                      child: Image.asset("assets/images/learn.png",
                       ),
                     ),
                     Padding(

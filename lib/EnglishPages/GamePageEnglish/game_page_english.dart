@@ -5,8 +5,6 @@ import 'dart:async';
 
 import 'package:studenx_oigev2/Game/bird.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:studenx_oigev2/pages/Kodu.dart';
-import 'package:page_transition/page_transition.dart';
 
 class GamePageEnglish extends StatefulWidget {
   const GamePageEnglish({Key? key}) : super(key: key);

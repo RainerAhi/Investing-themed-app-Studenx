@@ -1,17 +1,11 @@
 import 'package:studenx_oigev2/EnglishPages/Home.dart';
 import 'package:studenx_oigev2/intro_screens/intro_page4_english.dart';
-import 'package:studenx_oigev2/intro_screens/intro_page1.dart';
 import 'package:studenx_oigev2/intro_screens/intro_page1_english.dart';
-import 'package:studenx_oigev2/intro_screens/intro_page2.dart';
 import 'package:studenx_oigev2/intro_screens/intro_page2_english.dart';
-import 'package:studenx_oigev2/intro_screens/intro_page3.dart';
 import 'package:studenx_oigev2/intro_screens/intro_page3_english.dart';
-import 'package:studenx_oigev2/intro_screens/intro_screen4.dart';
-import 'package:studenx_oigev2/pages/Kodu.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class WelcomeScreenEnglish extends StatefulWidget {

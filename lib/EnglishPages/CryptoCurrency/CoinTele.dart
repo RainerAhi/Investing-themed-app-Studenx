@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:studenx_oigev2/AktsiadFolder/Aktsiad.dart';
 import 'package:studenx_oigev2/EnglishPages/CryptoCurrency/CryptoCurrency.dart';
-import 'package:studenx_oigev2/EnglishPages/Stocks/Stocks.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';

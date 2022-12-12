@@ -1,36 +1,23 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_carousel_slider/carousel_slider.dart';
-import 'package:flutter_carousel_slider/carousel_slider_indicators.dart';
-import 'package:flutter_carousel_slider/carousel_slider_transforms.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
-import 'package:lottie/lottie.dart';
 import 'package:slide_to_act/slide_to_act.dart';
-import 'package:studenx_oigev2/AktsiadFolder/Question2.dart';
-import 'package:studenx_oigev2/AktsiadFolder/Question3.dart';
-import 'package:studenx_oigev2/AktsiadFolder/RohkemVideosi.dart';
 import 'package:studenx_oigev2/AktsiadFolder/Tase3.dart';
 import 'package:studenx_oigev2/AktsiadFolder/UudisedCover.dart';
-import 'package:studenx_oigev2/AktsiadFolder/Youtube_videod4.dart';
-import 'package:studenx_oigev2/AktsiadFolder/Youtube_videod5.dart';
-import 'package:studenx_oigev2/AktsiadFolder/Youtube_videod6.dart';
 import 'package:studenx_oigev2/notes_pages/notes_aktsiad.dart';
 import 'package:studenx_oigev2/AktsiadFolder/RohkemAktsiad.dart';
 import 'package:studenx_oigev2/pages/Kodu.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:studenx_oigev2/AktsiadFolder/Youtube_videod.dart';
-import 'package:studenx_oigev2/AktsiadFolder/Youtube_videod2.dart';
-import 'package:studenx_oigev2/AktsiadFolder/Youtube_videod3.dart';
 import 'package:studenx_oigev2/AktsiadFolder/Tase2.dart';
 import 'package:studenx_oigev2/AktsiadFolder/Tase1.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:studenx_oigev2/pages/socials.dart';
 import 'Meemid.dart';
 import 'MyCreators.dart';
-import 'Question.dart';
-import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:page_transition/page_transition.dart';
-import 'dart:math' as math;
+
+import 'TestiTeadmisidUI.dart';
+import 'VaataKindlastiVideod.dart';
 
 class Aktsiad extends StatefulWidget {
   const Aktsiad({Key? key}) : super(key: key);
@@ -41,22 +28,6 @@ class Aktsiad extends StatefulWidget {
 
 class _AktsiadState extends State<Aktsiad> with SingleTickerProviderStateMixin {
 
-
-  late final AnimationController _controller1;
-
-  @override
-  void initState() {
-    super.initState();
-
-    _controller1 = AnimationController(vsync: this);
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-
-    _controller1.dispose();
-  }
 
   final _controller = PageController(
     viewportFraction: 1,
@@ -114,7 +85,7 @@ class _AktsiadState extends State<Aktsiad> with SingleTickerProviderStateMixin {
                           child: Text("riskitase: keskmine",
                             style: GoogleFonts.bebasNeue(
                               color: Colors.white,
-                              fontSize: 26,
+                              fontSize: 23,
                               letterSpacing: 9,
                               fontWeight: FontWeight.bold,
                             ),
@@ -125,32 +96,26 @@ class _AktsiadState extends State<Aktsiad> with SingleTickerProviderStateMixin {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 10),
-                  child: SlideAction(
-                    height: 70,
-                    borderRadius: 50,
-                    reversed: true,
-                    elevation: 0,
-                    innerColor: Colors.white,
-                    outerColor: Colors.transparent,
-                    sliderButtonIconSize: 50,
-                    submittedIcon: Icon(Icons.arrow_circle_left,
-                      color: Colors.white,
-                    ),
-                    sliderButtonIcon: Icon(Icons.arrow_circle_right,
-                      size: 30,
-                      color: Color(0xffFF5F6D),
-                    ),
-                    text: "timer",
-                    textStyle: GoogleFonts.bebasNeue(
-                      fontSize: 45,
-                      color: Colors.transparent,
-                    ),
-                    onSubmit: () => Navigator.of(context).push(
+                  padding: const EdgeInsets.only(left: 280, top: 15),
+                  child: GestureDetector(
+                    onTap: () => Navigator.of(context).push(
                       PageTransition(
                         child: Kodu(),
                         type: PageTransitionType.fade,
                         alignment: Alignment.center,
+                      ),
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(15),
+                      child: Container(
+                        color: Colors.transparent,
+                        height: 50,
+                        width: 60,
+                        child: Icon(
+                          Icons.arrow_circle_left,
+                          color:  Colors.white,
+                          size: 55,
+                        ),
                       ),
                     ),
                   ),
@@ -189,235 +154,7 @@ class _AktsiadState extends State<Aktsiad> with SingleTickerProviderStateMixin {
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(20, 0, 10, 0),
-              child: Stack(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 80),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.white12, width: 10),
-                        borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                        gradient: LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: [
-                            Color(0xffFF5F6D),
-                            Color(0xffFF5F6D),
-                            Color(0xffFFC371),
-                          ],
-                        ),
-                      ),
-                      height: 180,
-                      width: 350,
-                      child: Stack(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(top: 5),
-                            child: Stack(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 0),
-                                  child: MaterialButton(
-                                    height: 50,
-                                    minWidth: 10,
-                                    onPressed: () => Navigator.of(context).push(
-                                      PageTransition(
-                                        child: MyQuestion(),
-                                        type: PageTransitionType.fade,
-                                        alignment: Alignment.center,
-                                      ),
-                                    ),
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(15.0)),
-                                    child: Ink(
-                                      height: 50,
-                                      width: 50,
-                                      decoration: const BoxDecoration(
-                                        gradient: LinearGradient(
-                                          begin: Alignment.topRight,
-                                          end: Alignment.bottomLeft,
-                                          colors: [
-                                            Color(0xffFFC371),
-                                            Color(0xffFF5F6D),
-                                          ],
-                                        ),
-                                        borderRadius: BorderRadius.all(Radius.circular(15.0)),
-                                      ),
-                                      child: Container(
-                                        alignment: Alignment.center,
-                                        child: Text("1",
-                                          style: GoogleFonts.robotoCondensed(
-                                            fontSize: 30,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.white,
-                                          ),),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 60),
-                                  child: MaterialButton(
-                                    height: 50,
-                                    minWidth: 10,
-                                    onPressed: () => Navigator.of(context).push(
-                                      PageTransition(
-                                        child: MyQuestion2(),
-                                        type: PageTransitionType.fade,
-                                        alignment: Alignment.center,
-                                      ),
-                                    ),
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(15.0)),
-                                    child: Ink(
-                                      height: 50,
-                                      width: 50,
-                                      decoration: const BoxDecoration(
-                                        gradient: LinearGradient(
-                                          begin: Alignment.topRight,
-                                          end: Alignment.bottomLeft,
-                                          colors: [
-                                            Color(0xffFFC371),
-                                            Color(0xffFF5F6D),
-                                          ],
-                                        ),
-                                        borderRadius: BorderRadius.all(Radius.circular(15.0)),
-                                      ),
-                                      child: Container(
-                                        alignment: Alignment.center,
-                                        child: Text("2",
-                                          style: GoogleFonts.robotoCondensed(
-                                            fontSize: 30,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.white,
-                                          ),),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 120),
-                                  child: MaterialButton(
-                                    height: 50,
-                                    minWidth: 10,
-                                    onPressed: () => Navigator.of(context).push(
-                                      PageTransition(
-                                        child: MyQuestion3(),
-                                        type: PageTransitionType.fade,
-                                        alignment: Alignment.center,
-                                      ),
-                                    ),
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(15.0)),
-                                    child: Ink(
-                                      height: 50,
-                                      width: 50,
-                                      decoration: const BoxDecoration(
-                                        gradient: LinearGradient(
-                                          begin: Alignment.topRight,
-                                          end: Alignment.bottomLeft,
-                                          colors: [
-                                            Color(0xffFFC371),
-                                            Color(0xffFF5F6D),
-                                          ],
-                                        ),
-                                        borderRadius: BorderRadius.all(Radius.circular(15.0)),
-                                      ),
-                                      child: Container(
-                                        alignment: Alignment.center,
-                                        child: Text("3",
-                                          style: GoogleFonts.robotoCondensed(
-                                            fontSize: 30,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.white,
-                                          ),),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 70, left: 10),
-                            child: Row(
-                              children: [
-                                Icon(Icons.play_arrow_sharp,
-                                  size: 35,
-                                  color: Colors.white,
-                                ),
-                                GestureDetector(
-                                  onTap: () {
-                                    showDialog(
-                                      context: context,
-                                      builder: (context) => AlertDialog(
-                                        title: Text("Miks testida teadmisid",
-                                          style: GoogleFonts.bebasNeue(
-                                            fontSize: 40,
-                                            color: Colors.white,
-                                          ),
-                                        ),
-                                        content: Text(
-                                          "Kordamine on tarkuse ema! Niimoodi on võimalik korrata oma teadmisi. Nt kui sa oled olnud eemal pikka aega, siis on see ideaalne võimalus kuidas korrata. Mõtle seda kui kooli tunnikontrolli, kui sa saad selle hea tulemuse, siis oled sa teemast hästi aru saanud.",
-                                          style: GoogleFonts.sansita(
-                                            color: Colors.white,
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                        backgroundColor: Color(0xffFFC371),
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(20),
-                                        ),
-                                        actions: [
-                                          TextButton(
-                                            onPressed: () => Navigator.pop(context),
-                                            child: Text(
-                                              "Ok",
-                                              style: GoogleFonts.prompt(
-                                                color: Colors.white,
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    );
-                                  },
-                                  child: Text("Miks",
-                                    style: GoogleFonts.bebasNeue(
-                                      fontSize: 28,
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 105, left: 10),
-                            child: GradientText(
-                              'Testi oma teadmisid',
-                              style: GoogleFonts.bebasNeue(
-                                fontSize: 45,
-                                fontWeight: FontWeight.bold,
-                              ),
-                              gradient: LinearGradient(colors: [
-                                Color(0xffffffff),
-                                Color(0xffffffff),
-                              ]),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 180),
-                    child: Lottie.network("https://assets9.lottiefiles.com/packages/lf20_DMgKk1.json",
-                      height: 170,
-                    ),
-                  ),
-                ],
-              ),
+              child: TestiTeadmisidUI(),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
@@ -556,9 +293,9 @@ class _AktsiadState extends State<Aktsiad> with SingleTickerProviderStateMixin {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 200),
-                    child: Lottie.network("https://assets1.lottiefiles.com/packages/lf20_vktpsg4v.json",
-                      height: 160,
+                    padding: const EdgeInsets.only(top: 15, bottom: 0, left: 215, right: 10),
+                    child: Image.asset("assets/images/hinnad.png",
+                      height: 120,
                     ),
                   ),
                 ],
@@ -566,242 +303,7 @@ class _AktsiadState extends State<Aktsiad> with SingleTickerProviderStateMixin {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 20, left: 10, right: 10),
-              child: Stack(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 0),
-                    child: Container(
-                      height: 330,
-                      child: Stack(
-                        children: [
-                          LiquidSwipe(
-                            enableSideReveal: false,
-                            fullTransitionValue: 900,
-                            slideIconWidget: Padding(
-                              padding: const EdgeInsets.fromLTRB(0, 255, 0, 0),
-                            ),
-                            pages: [
-                              Stack(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20), topLeft: Radius.circular(20), topRight: Radius.circular(20),),
-                                      child: Container(
-                                        child: Padding(
-                                          padding: const EdgeInsets.only(top: 50, left: 0, right: 0,),
-                                          child: MyYoutubeVid(),
-                                        ),
-                                        decoration: BoxDecoration(
-                                            border: Border.all(color: Colors.white12, width: 10),
-                                            gradient: LinearGradient(
-                                              begin: Alignment.topCenter,
-                                              end: Alignment.bottomCenter,
-                                              colors: [
-                                                Color(0xffFF5F6D),
-                                                Color(0xffFF5F6D),
-                                                Color(0xffFFC371),
-                                              ],)
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20), topLeft: Radius.circular(20), topRight: Radius.circular(20),),
-                                  child: Container(
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(top: 50, left: 0, right: 0,),
-                                      child: MyYoutubeVid2(),
-                                    ),
-                                    decoration: BoxDecoration(
-                                        border: Border.all(color: Colors.white12, width: 10),
-                                        gradient: LinearGradient(
-                                          begin: Alignment.topCenter,
-                                          end: Alignment.bottomCenter,
-                                          colors: [
-                                            Color(0xffFF5F6D),
-                                            Color(0xffFF5F6D),
-                                            Color(0xffFFC371),
-                                          ],)
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20), topLeft: Radius.circular(20), topRight: Radius.circular(20),),
-                                  child: Container(
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(top: 50, left: 0, right: 0,),
-                                      child: MyYoutubeVid3(),
-                                    ),
-                                    decoration: BoxDecoration(
-                                        border: Border.all(color: Colors.white12, width: 10),
-                                        gradient: LinearGradient(
-                                          begin: Alignment.topCenter,
-                                          end: Alignment.bottomCenter,
-                                          colors: [
-                                            Color(0xffFF5F6D),
-                                            Color(0xffFF5F6D),
-                                            Color(0xffFFC371),
-                                          ],)
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20), topLeft: Radius.circular(20), topRight: Radius.circular(20),),
-                                  child: Container(
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(top: 50, left: 0, right: 0,),
-                                      child: MyYoutubeVid4(),
-                                    ),
-                                    decoration: BoxDecoration(
-                                        border: Border.all(color: Colors.white12, width: 10),
-                                        gradient: LinearGradient(
-                                          begin: Alignment.topCenter,
-                                          end: Alignment.bottomCenter,
-                                          colors: [
-                                            Color(0xffFF5F6D),
-                                            Color(0xffFF5F6D),
-                                            Color(0xffFFC371),
-                                          ],)
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20), topLeft: Radius.circular(20), topRight: Radius.circular(20),),
-                                  child: Container(
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(top: 50, left: 0, right: 0,),
-                                      child: MyYoutubeVid5(),
-                                    ),
-                                    decoration: BoxDecoration(
-                                        border: Border.all(color: Colors.white12, width: 10),
-                                        gradient: LinearGradient(
-                                          begin: Alignment.topCenter,
-                                          end: Alignment.bottomCenter,
-                                          colors: [
-                                            Color(0xffFF5F6D),
-                                            Color(0xffFF5F6D),
-                                            Color(0xffFFC371),
-                                          ],)
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20), topLeft: Radius.circular(20), topRight: Radius.circular(20),),
-                                  child: Container(
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(top: 50, left: 0, right: 0,),
-                                      child: MyYoutubeVid6(),
-                                    ),
-                                    decoration: BoxDecoration(
-                                        border: Border.all(color: Colors.white12, width: 10),
-                                        gradient: LinearGradient(
-                                          begin: Alignment.topCenter,
-                                          end: Alignment.bottomCenter,
-                                          colors: [
-                                            Color(0xffFF5F6D),
-                                            Color(0xffFF5F6D),
-                                            Color(0xffFFC371),
-                                          ],)
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                          Stack(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(top: 280, left: 260),
-                                child: Text("pühkige",
-                                  style: GoogleFonts.bebasNeue(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 250, left: 280),
-                                child: RotatedBox(
-                                  quarterTurns: 2,
-                                  child: Icon(
-                                    Icons.subdirectory_arrow_right_outlined,
-                                    size: 50,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 260, left: 8, right: 8),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.only(bottomRight: Radius.circular(20), bottomLeft: Radius.circular(20),),
-                              child: Container(
-                                color: Colors.transparent,
-                                child: Row(
-                                  children: [
-                                    MaterialButton(
-                                      height: 50,
-                                      minWidth: 50,
-                                      onPressed: () => Navigator.of(context).push(
-                                        PageTransition(
-                                          child: RohkemVideosi(),
-                                          type: PageTransitionType.fade,
-                                          alignment: Alignment.center,
-                                        ),
-                                      ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(left: 0, right: 0),
-                                        child: Text("rohkem videosi",
-                                          style: GoogleFonts.bebasNeue(
-                                            fontSize: 25,
-                                            color: Colors.white,
-                                            letterSpacing: 1,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 0, top: 20, bottom: 0),
-                    child: Center(
-                      child: Text(
-                        'KINDLASTI VAATAMISEKS',
-                        style: GoogleFonts.bebasNeue(
-                          fontSize: 38,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              child: VaataKindlastiVideod(),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
@@ -853,19 +355,16 @@ class _AktsiadState extends State<Aktsiad> with SingleTickerProviderStateMixin {
                   quarterTurns: 2,
                   child: Stack(
                     children: [
-                      Opacity(
-                        opacity: 1,
-                        child: ClipPath(
-                          clipper: WaveClipperTwo(),
-                          child: Container(
-                            height: 170,
-                            decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                colors: [
-                                  Colors.white12,
-                                  Colors.white12,
-                                ],
-                              ),
+                      ClipPath(
+                        clipper: WaveClipperTwo(),
+                        child: Container(
+                          height: 170,
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [
+                                Colors.white12,
+                                Colors.white12,
+                              ],
                             ),
                           ),
                         ),

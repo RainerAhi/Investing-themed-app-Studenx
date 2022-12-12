@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
-import '../pages/Kodu.dart';
 
 class FLisaVid1 extends StatefulWidget {
   const FLisaVid1({Key? key}) : super(key: key);

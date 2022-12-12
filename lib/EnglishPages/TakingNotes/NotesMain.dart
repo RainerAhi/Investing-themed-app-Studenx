@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
-import 'package:slide_to_act/slide_to_act.dart';
-import 'package:studenx_oigev2/EnglishPages/Home.dart';
 import 'package:studenx_oigev2/ToDo/data/database.dart';
 import 'package:studenx_oigev2/ToDo/dialog_box.dart';
 import 'package:studenx_oigev2/ToDo/todo_tile.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:studenx_oigev2/pages/Kodu.dart';
 
 class NotesMain extends StatefulWidget {
   const NotesMain ({Key? key}) : super(key: key);
@@ -92,7 +88,7 @@ class _NotesMainState extends State<NotesMain > {
           backgroundColor: Colors.white12,
           elevation: 0,
           toolbarHeight: 70,
-          iconTheme: IconThemeData(color: Colors.white),
+          iconTheme: IconThemeData(color: Colors.white, size: 50),
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [

@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:studenx_oigev2/AktsiadFolder/Tase2Teadmised.dart';
-import 'package:studenx_oigev2/AktsiadFolder/Tase1Teadmised.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:get/get.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:lottie/lottie.dart';
 import 'package:studenx_oigev2/EnglishPages/Stocks/Level2Learning.dart';
 
 class Level2 extends StatefulWidget {
@@ -15,6 +11,8 @@ class Level2 extends StatefulWidget {
 }
 
 class _Level2 extends State<Level2> with SingleTickerProviderStateMixin {
+
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -81,10 +79,8 @@ class _Level2 extends State<Level2> with SingleTickerProviderStateMixin {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 160, top: 0),
-                      child: Lottie.network(
-                        "https://assets5.lottiefiles.com/packages/lf20_3vc9btr6.json",
-                        height: 150,
+                      padding: const EdgeInsets.only(top: 10, bottom: 50, left: 170, right: 10),
+                      child: Image.asset("assets/images/learn.png",
                       ),
                     ),
                     Padding(

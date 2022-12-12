@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:studenx_oigev2/CryptoFolder/CTase3Teadmised.dart';
 
-import 'CTase1Teadmised.dart';
 
 class CTase3 extends StatefulWidget {
   const CTase3({Key? key}) : super(key: key);
@@ -13,9 +11,7 @@ class CTase3 extends StatefulWidget {
   State<CTase3> createState() => _CTase3();
 }
 
-class _CTase3 extends State<CTase3> {
-
-
+class _CTase3 extends State<CTase3> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
@@ -83,10 +79,8 @@ class _CTase3 extends State<CTase3> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 160, top: 0),
-                      child: Lottie.network(
-                        "https://assets5.lottiefiles.com/packages/lf20_3vc9btr6.json",
-                        height: 150,
+                      padding: const EdgeInsets.only(top: 10, bottom: 50, left: 170, right: 10),
+                      child: Image.asset("assets/images/learn.png",
                       ),
                     ),
                     Padding(

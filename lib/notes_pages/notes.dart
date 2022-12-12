@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:studenx_oigev2/notes_pages/notes_grid_aktsiad.dart';
 import 'package:studenx_oigev2/AktsiadFolder/google_sheets_api.dart';
 import 'package:studenx_oigev2/notes_pages/loading_circle.dart';
-import 'package:studenx_oigev2/notes_pages/notes_button.dart';
-import 'package:studenx_oigev2/notes_pages/notes_grid.dart';
-import 'package:studenx_oigev2/notes_pages/notes_textbox.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'dart:async';
 import '';
 class notes extends StatefulWidget {

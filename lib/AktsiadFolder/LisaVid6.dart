@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
-import '../pages/Kodu.dart';
 
 class LisaVid6 extends StatefulWidget {
   const LisaVid6({Key? key}) : super(key: key);

@@ -1,5 +1,4 @@
-import 'Question.dart';
-import 'package:flutter/material.dart';
+
 
 class Question {
   final String text;
@@ -113,7 +112,7 @@ final questions = [
     ],
   ),
   Question(
-    text: "EDividendi fondide suur miinus on...",
+    text: "Dividendi fondide suur miinus on...",
     options: [
       const Option(text: "see, et ainult pooled maksavad dividende", isCorrect: false),
       const Option(text: "seal on ainult paar aktsiat", isCorrect: false),

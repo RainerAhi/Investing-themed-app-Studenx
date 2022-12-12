@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_carousel_slider/carousel_slider.dart';
-import 'package:flutter_carousel_slider/carousel_slider_indicators.dart';
-import 'package:flutter_carousel_slider/carousel_slider_transforms.dart';
-import 'package:page_transition/page_transition.dart';
-import 'package:studenx_oigev2/AktsiadFolder/Aktsiad.dart';
-import 'package:studenx_oigev2/pages/Kodu.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
 
 
 class Memes extends StatefulWidget {
@@ -18,22 +12,6 @@ class Memes extends StatefulWidget {
 
 class _MemesState extends State<Memes> with SingleTickerProviderStateMixin {
 
-  late final AnimationController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-
-    _controller = AnimationController(vsync: this);
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-
-    _controller.dispose();
-  }
-
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +20,7 @@ class _MemesState extends State<Memes> with SingleTickerProviderStateMixin {
         Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20,top: 100),
+              padding: const EdgeInsets.only(left: 20, right: 20,top: 70),
               child: Container(
                 height: 400,
                 child: CarouselSlider(
@@ -674,15 +652,13 @@ class _MemesState extends State<Memes> with SingleTickerProviderStateMixin {
           ],
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 170, right: 20),
-          child: Lottie.network(
-            "https://assets4.lottiefiles.com/packages/lf20_kxikfqwj.json",
+          padding: const EdgeInsets.only(top: 0, bottom: 0, left: 197, right: 10),
+          child: Image.asset("assets/images/meme.png",
             height: 150,
-            controller: _controller,
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 110,left: 40),
+          padding: const EdgeInsets.only(top: 75,left: 40),
           child: Text("memes",
             style: GoogleFonts.bebasNeue(
               fontSize: 60,

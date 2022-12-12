@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
 
 class IntroPage2English extends StatelessWidget {
 
@@ -46,8 +45,10 @@ class IntroPage2English extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 30),
-            child: Lottie.network("https://assets4.lottiefiles.com/packages/lf20_kwljzgsc.json"),
+            padding: const EdgeInsets.only(top: 60),
+            child: Image.asset("assets/images/video.png",
+              height: 310,
+            ),
           ),
         ],
       ),

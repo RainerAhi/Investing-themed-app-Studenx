@@ -1,11 +1,7 @@
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:studenx_oigev2/AktsiadFolder/google_sheets_api.dart';
 import 'package:studenx_oigev2/SelectLanguage.dart';
-import 'package:studenx_oigev2/pages/hinnad.dart';
-import 'package:studenx_oigev2/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:coingecko_api/coingecko_api.dart';
-import 'package:gsheets/gsheets.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 

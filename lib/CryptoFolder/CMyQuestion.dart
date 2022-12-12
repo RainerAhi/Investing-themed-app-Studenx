@@ -6,7 +6,7 @@ import 'package:studenx_oigev2/CryptoFolder/krupto.dart';
 import 'CQuiz.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:lottie/lottie.dart';
+
 class CMyQuestion extends StatefulWidget {
   const CMyQuestion({Key? key}) : super(key: key);
 
@@ -294,7 +294,14 @@ class ResultPage extends StatelessWidget {
           padding: const EdgeInsets.only(top: 70),
           child: Column(
             children: [
-              Lottie.network("https://assets3.lottiefiles.com/packages/lf20_xldzoar8.json"),
+              Padding(
+                padding: const EdgeInsets.only(top: 10, bottom: 40, left: 0, right: 0),
+                child: Center(
+                  child: Image.asset("assets/images/trophy.png",
+                    height: 340,
+                  ),
+                ),
+              ),
               Text("Sa said $score/${questions.length}",
                 style: GoogleFonts.bebasNeue(
                   fontSize: 80,

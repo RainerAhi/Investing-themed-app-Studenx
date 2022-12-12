@@ -7,7 +7,6 @@ class notes_textbox extends StatelessWidget {
 
   notes_textbox({required this.text});
 
-  final _controller = PageController();
 
   @override
   Widget build(BuildContext context) {

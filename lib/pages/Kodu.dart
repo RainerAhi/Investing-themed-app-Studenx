@@ -2,33 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_carousel_slider/carousel_slider.dart';
 import 'package:flutter_carousel_slider/carousel_slider_indicators.dart';
 import 'package:flutter_carousel_slider/carousel_slider_transforms.dart';
-import 'package:studenx_oigev2/AktsiadFolder/WallStreetJournal.dart';
 import 'package:studenx_oigev2/CryptoFolder/krupto.dart';
 import 'package:studenx_oigev2/Game/game_page.dart';
 import 'package:studenx_oigev2/Music/MyMusicPlayer.dart';
-import 'package:studenx_oigev2/SelectLanguage.dart';
 import 'package:studenx_oigev2/ToDo/TodoMain.dart';
 import 'package:studenx_oigev2/AktsiadFolder/Aktsiad.dart';
-import 'package:studenx_oigev2/notes_pages/notes_aktsiad.dart';
-import 'package:studenx_oigev2/pages/Meist.dart';
-import 'package:studenx_oigev2/AktsiadFolder/Tase1Teadmised.dart';
 import 'package:lottie/lottie.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'dart:ui' as ui;
 import 'package:page_transition/page_transition.dart';
-import 'package:studenx_oigev2/AktsiadFolder/Youtube_videod.dart';
 import 'package:studenx_oigev2/pages/RaskedM%C3%B5isted.dart';
 import 'package:studenx_oigev2/pages/AboutUs.dart';
 import 'package:studenx_oigev2/pages/socials.dart';
-import 'package:studenx_oigev2/pages/test.dart';
 import 'package:studenx_oigev2/pages/timer.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
-import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
-import 'package:studenx_oigev2/notes_pages/notes.dart';
 import 'InvesteerimiseGraph.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:adaptive_theme/adaptive_theme.dart';
 import 'dart:math' as math;
 
 class Kodu extends StatefulWidget {
@@ -205,9 +193,10 @@ class _KoduState extends State<Kodu> with SingleTickerProviderStateMixin {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.only(top: 30, bottom: 30),
-                                      child: Lottie.network("https://assets9.lottiefiles.com/private_files/lf30_F3v2Nj.json",
-                                        controller: _controller,
+                                      padding: const EdgeInsets.only(top: 60, bottom: 50),
+                                      child: Center(
+                                        child: Image.asset("assets/images/stocks.png",
+                                        ),
                                       ),
                                     ),
                                     Padding(
@@ -266,9 +255,10 @@ class _KoduState extends State<Kodu> with SingleTickerProviderStateMixin {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.only(top: 0, bottom: 53),
-                                      child: Lottie.network("https://assets8.lottiefiles.com/packages/lf20_yc9ywdm7.json",
-                                        controller: _controller,
+                                      padding: const EdgeInsets.only(top: 60, bottom: 50),
+                                      child: Center(
+                                        child: Image.asset("assets/images/crypto.png",
+                                        ),
                                       ),
                                     ),
                                     Padding(
@@ -346,9 +336,10 @@ class _KoduState extends State<Kodu> with SingleTickerProviderStateMixin {
                                       height: 170,
                                       width: 246,
                                       child: Padding(
-                                        padding: const EdgeInsets.only(left: 0, top: 0),
-                                        child: Lottie.network("https://assets5.lottiefiles.com/private_files/lf30_x8aowqs9.json",
-                                          controller: _controller,
+                                        padding: const EdgeInsets.only(top: 30, bottom: 30),
+                                        child: Center(
+                                          child: Image.asset("assets/images/rasked.png",
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -385,8 +376,11 @@ class _KoduState extends State<Kodu> with SingleTickerProviderStateMixin {
                                             height: 170,
                                             width: 246,
                                             child: Padding(
-                                              padding: const EdgeInsets.only(left: 12),
-                                              child: Lottie.network("https://assets7.lottiefiles.com/private_files/lf30_cldvedro.json",),
+                                              padding: const EdgeInsets.only(top: 20, bottom: 20, right: 20),
+                                              child: Center(
+                                                child: Image.asset("assets/images/notes.png",
+                                                ),
+                                              ),
                                             ),
                                           ),
                                         ),
@@ -417,7 +411,13 @@ class _KoduState extends State<Kodu> with SingleTickerProviderStateMixin {
                                             ),
                                             height: 170,
                                             width: 246,
-                                            child: Lottie.network("https://assets10.lottiefiles.com/packages/lf20_4yofoa5q.json"),
+                                            child: Padding(
+                                              padding: const EdgeInsets.only(top: 20, bottom: 20),
+                                              child: Center(
+                                                child: Image.asset("assets/images/timer.png",
+                                                ),
+                                              ),
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -451,7 +451,12 @@ class _KoduState extends State<Kodu> with SingleTickerProviderStateMixin {
                                             ),
                                             height: 170,
                                             width: 246,
-                                            child: Lottie.network("https://assets2.lottiefiles.com/packages/lf20_h8lk5ow8.json",
+                                            child: Padding(
+                                              padding: const EdgeInsets.only(top: 10, bottom: 30),
+                                              child: Center(
+                                                child: Image.asset("assets/images/game.png",
+                                                ),
+                                              ),
                                             ),
                                           ),
                                         ),

@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:expansion_widget/expansion_widget.dart';
-import 'dart:math' as math;
 import 'package:url_launcher/url_launcher.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class MyCreators extends StatefulWidget {
   const MyCreators({Key? key}) : super(key: key);
@@ -62,8 +58,8 @@ class _MyCreatorsState extends State<MyCreators> {
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(100),
                                     child: Container(
-                                      height: 77,
-                                      width: 77,
+                                      height: 73,
+                                      width: 73,
                                       decoration: BoxDecoration(
                                           gradient: LinearGradient(colors: [
                                             Color(0xff89CFFF),
@@ -89,8 +85,8 @@ class _MyCreatorsState extends State<MyCreators> {
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(100),
                                     child: Container(
-                                      height: 77,
-                                      width: 77,
+                                      height: 73,
+                                      width: 73,
                                       color: Color(0xffFFC371),
                                       child: CircleAvatar(
                                         backgroundImage: AssetImage("assets/images/josephhogue.jpg"),
@@ -111,8 +107,8 @@ class _MyCreatorsState extends State<MyCreators> {
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(100),
                                     child: Container(
-                                      height: 77,
-                                      width: 77,
+                                      height: 73,
+                                      width: 73,
                                       color: Color(0xff5ce1e6),
                                       child: CircleAvatar(
                                         backgroundImage: AssetImage("assets/images/humphrey.jpg"),

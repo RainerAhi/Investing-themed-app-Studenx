@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Cryptoprices extends StatefulWidget {
+class Cryptoprices extends StatelessWidget {
   const Cryptoprices({Key? key}) : super(key: key);
 
-  @override
-  State<Cryptoprices> createState() => _CryptopricesState();
-}
-
-class _CryptopricesState extends State<Cryptoprices> {
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -443,3 +438,4 @@ class _CryptopricesState extends State<Cryptoprices> {
     );
   }
 }
+

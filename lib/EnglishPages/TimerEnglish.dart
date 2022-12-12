@@ -1,14 +1,9 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
-import 'dart:async';
 import 'package:page_transition/page_transition.dart';
-import 'package:slide_to_act/slide_to_act.dart';
 import 'package:studenx_oigev2/EnglishPages/Home.dart';
-import 'package:studenx_oigev2/pages/Kodu.dart';
 
 class MyTimerEnglish extends StatefulWidget {
   const MyTimerEnglish({Key? key}) : super(key: key);
@@ -53,31 +48,53 @@ class _MyTimerEnglishState extends State<MyTimerEnglish> {
             children: [
               Stack(
                 children: [
-                  SlideAction(
-                    height: 70,
-                    borderRadius: 30,
-                    reversed: true,
-                    elevation: 0,
-                    innerColor: Colors.white,
-                    outerColor: Colors.white12,
-                    sliderButtonIconSize: 50,
-                    submittedIcon: Icon(Icons.arrow_circle_left,
-                      color: Colors.white,
+                  ClipPath(
+                    clipper: WaveClipperTwo(),
+                    child: Container(
+                      height: 100,
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [
+                            Colors.white12,
+                            Colors.white12,
+                          ],
+                        ),
+                      ),
                     ),
-                    sliderButtonIcon: Icon(Icons.arrow_circle_right,
-                      size: 30,
-                      color: Color(0xffFFC371),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 270, top: 15),
+                    child: GestureDetector(
+                      onTap: () => Navigator.of(context).push(
+                        PageTransition(
+                          child: Home(),
+                          type: PageTransitionType.fade,
+                          alignment: Alignment.center,
+                        ),
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(15),
+                        child: Container(
+                          color: Colors.transparent,
+                          height: 50,
+                          width: 60,
+                          child: Icon(
+                            Icons.arrow_circle_left,
+                            color:  Colors.white,
+                            size: 55,
+                          ),
+                        ),
+                      ),
                     ),
-                    text: "timer",
-                    textStyle: GoogleFonts.bebasNeue(
-                      fontSize: 45,
-                      color: Colors.white,
-                    ),
-                    onSubmit: () => Navigator.of(context).push(
-                      PageTransition(
-                        child: Home(),
-                        type: PageTransitionType.fade,
-                        alignment: Alignment.center,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Center(
+                      child: Text("timer",
+                        style: GoogleFonts.bebasNeue(
+                          fontSize: 60,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ),
@@ -86,7 +103,7 @@ class _MyTimerEnglishState extends State<MyTimerEnglish> {
               Stack(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 40),
+                    padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 25),
                     child: Container(
                       height: 400,
                       width: 300,
@@ -113,7 +130,7 @@ class _MyTimerEnglishState extends State<MyTimerEnglish> {
                               ),),
                           ),
                           Text("minutes remaining",
-                            style: GoogleFonts.bebasNeue(fontSize: 42,
+                            style: GoogleFonts.bebasNeue(fontSize: 38,
                               color: Colors.white,
                             ),
                           ),
@@ -122,9 +139,11 @@ class _MyTimerEnglishState extends State<MyTimerEnglish> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 150, left: 50),
-                    child: Lottie.network("https://assets10.lottiefiles.com/packages/lf20_4yofoa5q.json",
-                      height: 300,
+                    padding: const EdgeInsets.only(top: 190),
+                    child: Center(
+                      child: Image.asset("assets/images/timer.png",
+                        height: 200,
+                      ),
                     ),
                   ),
                 ],
@@ -179,7 +198,7 @@ class _MyTimerEnglishState extends State<MyTimerEnglish> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 80, left: 120),
+                    padding: const EdgeInsets.only(top: 50, left: 120),
                     child: GestureDetector(
                       onTap: () {
                         showDialog(

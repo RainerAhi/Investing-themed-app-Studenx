@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
-import '../pages/Kodu.dart';
 
 class MyYoutubeVid5 extends StatefulWidget {
   const MyYoutubeVid5({Key? key}) : super(key: key);

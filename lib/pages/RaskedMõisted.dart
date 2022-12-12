@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:slide_to_act/slide_to_act.dart';
 
@@ -36,31 +35,51 @@ class _RaskedMoistedState extends State<RaskedMoisted> {
           children: [
             Stack(
               children: [
-                SlideAction(
-                  height: 70,
-                  borderRadius: 30,
-                  reversed: true,
-                  elevation: 0,
-                  innerColor: Colors.white,
-                  outerColor: Colors.white12,
-                  sliderButtonIconSize: 50,
-                  submittedIcon: Icon(Icons.arrow_circle_left,
-                    color: Color(0xffFF5F6D),
+                ClipPath(
+                  clipper: WaveClipperTwo(),
+                  child: Container(
+                    height: 100,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Colors.white12,
+                          Colors.white12,
+                        ],
+                      ),
+                    ),
                   ),
-                  sliderButtonIcon: Icon(Icons.arrow_circle_right,
-                    size: 30,
-                    color: Color(0xffFF5F6D),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 310, top: 15),
+                  child: GestureDetector(
+                    onTap: () => Navigator.of(context).push(
+                      PageTransition(
+                        child: Kodu(),
+                        type: PageTransitionType.fade,
+                        alignment: Alignment.center,
+                      ),
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(15),
+                      child: Container(
+                        color: Colors.transparent,
+                        height: 50,
+                        width: 60,
+                        child: Icon(
+                          Icons.arrow_circle_left,
+                          color:  Colors.white,
+                          size: 55,
+                        ),
+                      ),
+                    ),
                   ),
-                  text: "rasked mõisted",
-                  textStyle: GoogleFonts.bebasNeue(
-                    fontSize: 45,
-                    color: Colors.white,
-                  ),
-                  onSubmit: () => Navigator.of(context).push(
-                    PageTransition(
-                      child: Kodu(),
-                      type: PageTransitionType.fade,
-                      alignment: Alignment.center,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("Rasked mõisted",
+                    style: GoogleFonts.bebasNeue(
+                      fontSize: 58,
+                      color: Colors.white,
                     ),
                   ),
                 ),
@@ -1204,7 +1223,7 @@ class _RaskedMoistedState extends State<RaskedMoisted> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 7, right: 7),
-                          child: Text("Kogus x hind = market cap.",
+                          child: Text("aktsiad millega saab avalikkus kaubelda.",
                             style: GoogleFonts.sansita(
                               fontSize: 18,
                               color: Colors.white,

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
-import 'package:studenx_oigev2/AktsiadFolder/Aktsiad.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:lottie/lottie.dart';
 import 'package:studenx_oigev2/EnglishPages/Stocks/Stocks.dart';
 import 'StocksQuiz2.dart';
 
@@ -294,7 +292,14 @@ class ResultPage extends StatelessWidget {
           padding: const EdgeInsets.only(top: 70),
           child: Column(
             children: [
-              Lottie.network("https://assets3.lottiefiles.com/packages/lf20_xldzoar8.json"),
+              Padding(
+                padding: const EdgeInsets.only(top: 10, bottom: 40, left: 0, right: 0),
+                child: Center(
+                  child: Image.asset("assets/images/trophy.png",
+                    height: 340,
+                  ),
+                ),
+              ),
               Text("You got $score/${questions.length}",
                 style: GoogleFonts.bebasNeue(
                   fontSize: 80,

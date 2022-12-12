@@ -4,7 +4,6 @@ import 'package:studenx_oigev2/AktsiadFolder/Aktsiad.dart';
 import 'quiz2.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:lottie/lottie.dart';
 
 class MyQuestion2 extends StatefulWidget {
   const MyQuestion2({Key? key}) : super(key: key);
@@ -293,7 +292,14 @@ class ResultPage extends StatelessWidget {
           padding: const EdgeInsets.only(top: 70),
           child: Column(
             children: [
-              Lottie.network("https://assets3.lottiefiles.com/packages/lf20_xldzoar8.json"),
+              Padding(
+                padding: const EdgeInsets.only(top: 10, bottom: 40, left: 0, right: 0),
+                child: Center(
+                  child: Image.asset("assets/images/trophy.png",
+                    height: 340,
+                  ),
+                ),
+              ),
               Text("Sa said $score/${questions.length}",
                 style: GoogleFonts.bebasNeue(
                   fontSize: 80,

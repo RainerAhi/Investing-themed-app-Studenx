@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
-import 'package:studenx_oigev2/AktsiadFolder/Aktsiad.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
-import 'package:page_transition/page_transition.dart';
 import 'dart:math' as math;
 
 class MyMusic extends StatefulWidget {
@@ -43,8 +39,6 @@ class _MyMusicState extends State<MyMusic> {
               decoration: BoxDecoration(
                 gradient: RadialGradient(
                   colors: [
-                    Color(0xffFFC371),
-                    Color(0xffFFC371),
                     Color(0xffFF5F6D),
                     Color(0xffFF5F6D),
                   ],
@@ -76,8 +70,6 @@ class _MyMusicState extends State<MyMusic> {
                 decoration: BoxDecoration(
                   gradient: RadialGradient(
                     colors: [
-                      Color(0xffFFC371),
-                      Color(0xffFFC371),
                       Color(0xffFF5F6D),
                       Color(0xffFF5F6D),
                     ],
@@ -85,7 +77,13 @@ class _MyMusicState extends State<MyMusic> {
                 ),
                 height: 170,
                 width: 246,
-                child: Lottie.network("https://assets10.lottiefiles.com/private_files/lf30_fjln45y5.json"),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 25, bottom: 25),
+                  child: Center(
+                    child: Image.asset("assets/images/muusika.png",
+                    ),
+                  ),
+                ),
               ),
             ),
           ),

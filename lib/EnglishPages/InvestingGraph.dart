@@ -1,12 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:lottie/lottie.dart';
-import 'package:studenx_oigev2/pages/Kodu.dart';
-import 'package:studenx_oigev2/pages/cryptohinnad.dart';
-import 'package:studenx_oigev2/AktsiadFolder/Tase1Teadmised.dart';
-import 'package:studenx_oigev2/AktsiadFolder/Youtube_videod.dart';
-import 'package:studenx_oigev2/pages/hinnad.dart';
-import 'package:lottie/lottie.dart';
 import 'package:fl_chart/fl_chart.dart';
 
 class InvestingGraph extends StatefulWidget {

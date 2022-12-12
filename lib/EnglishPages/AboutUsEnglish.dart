@@ -2,12 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:slide_to_act/slide_to_act.dart';
-import 'package:studenx_oigev2/AktsiadFolder/WallStreetJournal.dart';
 import 'package:studenx_oigev2/EnglishPages/Home.dart';
-import 'package:studenx_oigev2/notes_pages/notes_aktsiad.dart';
-import 'package:studenx_oigev2/pages/Kodu.dart';
-import 'package:lottie/lottie.dart';
 
 class AboutUsEnglish extends StatefulWidget {
   const AboutUsEnglish({Key? key}) : super(key: key);
@@ -115,7 +110,6 @@ class _AboutUsEnglishState extends State<AboutUsEnglish> {
                           ),
                         ),
                       ),
-                      Lottie.network("https://assets10.lottiefiles.com/packages/lf20_27klftwl.json")
                     ],
                   ),
                 ),

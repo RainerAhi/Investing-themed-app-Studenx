@@ -7,7 +7,7 @@ class ToDoDataBase {
 
   void createInitialData() {
     toDoList = [
-      ["näide/example", false],
+      ["näide/example. Sa seda kustutada pühkides paremalt vasakule/You can delete this by swiping from right to left.", false],
     ];
   }
 

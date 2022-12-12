@@ -1,19 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_carousel_slider/carousel_slider.dart';
-import 'package:flutter_carousel_slider/carousel_slider_indicators.dart';
-import 'package:flutter_carousel_slider/carousel_slider_transforms.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:slide_to_act/slide_to_act.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:studenx_oigev2/AktsiadFolder/Aktsiad.dart';
 import 'package:studenx_oigev2/CryptoFolder/krupto.dart';
-import 'package:studenx_oigev2/EnglishPages/CryptoCurrency/CryptoCurrency.dart';
-import 'package:studenx_oigev2/Music/MyMusicPlayer.dart';
-import 'package:studenx_oigev2/ToDo/TodoMain.dart';
-import 'package:lottie/lottie.dart';
-import 'dart:math' as math;
 
 class CTase1Teadmised extends StatefulWidget {
   const CTase1Teadmised({Key? key}) : super(key: key);

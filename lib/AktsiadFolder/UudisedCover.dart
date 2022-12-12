@@ -17,30 +17,13 @@ class UudisedCover extends StatefulWidget {
 
 class _UudisedCoverState extends State<UudisedCover> with SingleTickerProviderStateMixin{
 
-  late final AnimationController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-
-    _controller = AnimationController(
-        vsync: this
-    );
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-
-    _controller.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         Padding(
-          padding: const EdgeInsets.only(top: 100),
+          padding: const EdgeInsets.only(top: 75),
           child: Container(
             decoration: BoxDecoration(
               border: Border.all(color: Colors.white12, width: 10),
@@ -240,10 +223,9 @@ class _UudisedCoverState extends State<UudisedCover> with SingleTickerProviderSt
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 160),
-          child: Lottie.network("https://assets6.lottiefiles.com/packages/lf20_mp6wwkvx.json",
-            controller: _controller,
-            height: 200,
+          padding: const EdgeInsets.only(top: 0, bottom: 0, left: 185, right: 10),
+          child: Image.asset("assets/images/uudised.png",
+            height: 140,
           ),
         ),
       ],
